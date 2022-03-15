@@ -12,6 +12,7 @@ import { Injectable } from '@angular/core';
 
 export class HeroesService {
 
+    //Arreglo con heroes
     private heroes:HeroeInterface[] = [
     {
         nombre: "Aquaman",
@@ -71,6 +72,10 @@ export class HeroesService {
 
     getHeroes():HeroeInterface[]{
         return this.heroes;
+    }
+
+    getHeroeSingular(idx: any){
+        return this.heroes[idx];
     }
 }
 
