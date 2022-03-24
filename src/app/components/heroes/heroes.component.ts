@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HeroesService, HeroeInterface} from '../../services/heroes.services';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 
 
 

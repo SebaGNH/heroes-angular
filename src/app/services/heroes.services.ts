@@ -77,6 +77,20 @@ export class HeroesService {
     getHeroeSingular(idx: any){
         return this.heroes[idx];
     }
+
+    buscarHeroes(termino:string): HeroeInterface[] {
+        let heroesArr: HeroeInterface [] = [];
+        termino = termino.toLowerCase();
+
+        for (let hero of this.heroes) {
+            if (hero.nombre.toLowerCase().indexOf( termino ) >= 0 ){
+                //Agrega al heroe completo
+                heroesArr.push(hero);
+            }
+        }
+        return heroesArr;
+    }
+
 }
 
 export interface HeroeInterface{
@@ -86,3 +100,4 @@ export interface HeroeInterface{
     aparicion: string;
     casa:string;
 }
+

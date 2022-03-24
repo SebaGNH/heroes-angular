@@ -12,4 +12,8 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  buscarHeroe(texto: string){
+    console.log("--Keyup evento-- "+ texto);
+  }
+
 }
